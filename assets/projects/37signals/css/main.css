@@ -1,0 +1,541 @@
+/** sitewide css **/
+* {
+		margin:0;
+		padding:0;
+}
+body {
+		font-family: "Crimson Text", sans-serif;
+}
+
+a {
+		color: #336699;
+		text-decoration: none;
+}
+
+header,
+section {
+		display: block;
+		margin: 30px auto;
+		width: 825px;
+}
+
+/** heading 1 **/
+header > h1,
+#customers h1,
+#manifesto h1,
+#rework h1,
+#offerings h1 {
+		color: #232323;
+		font-size: 48px;
+		line-height: 52px;
+		letter-spacing: -1px;
+		margin: 20px 0;
+		text-align: center;
+}
+
+hr {
+		background: white url('../img/img-hr.png') no-repeat 50%;
+		border: 0;
+		clear: both;
+		height: 12px;
+}
+
+/** navigation **/
+nav { 
+		font-family: sans-serif;
+		height: 48px;
+		min-width: 100%; 
+	}
+
+nav ul {
+		float: right;
+		margin: 12px 18px;
+		padding: 10px 30px;
+}
+
+nav li {
+		color: #369369;
+		display: inline-block;
+		font-size: 12px;
+		margin: 0 5px;
+		padding: 5px;
+}
+
+nav a:hover { 
+		color: #18AFE0;
+}
+
+.signin {
+		color: #18AFE0;
+
+}
+
+.signin:hover  {
+		color: #369369;
+}
+
+/** header **/
+header {
+		clear: both;
+		margin-bottom: 40px;
+		text-align: center;
+}
+
+header > h2 {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		margin: 10px 0;
+		color: #222222;
+}
+
+#products {
+		height: 277px;
+}
+
+#products div{
+		border: 1px solid #E8E8E8;
+		border-radius: 5px;
+		font-family: "Roboto", sans-serif;
+		float: left;
+		margin: 25px 0 0 58px;
+		padding: 20px 30px;
+		width: 17%;
+}
+
+#products h3 {
+		font-size: 21px;
+		color: #336699;
+		font-weight: bold;
+		line-height: 32px;
+		margin-bottom: 10px;
+}
+
+#products span {
+		text-decoration: underline;
+}
+
+#products sup {
+		color: #999999;
+		font-size: 11px;
+}
+
+#products h4 {
+		margin: 10px 0;
+		font-size: 14px;
+		color: #C00C00;
+}
+
+#products p {
+		color: #222222;
+		font-size: 14px;
+		line-height: 21px;
+		margin: 5px 0;
+}
+
+/**customers **/
+#customers {
+		margin-bottom: 50px;
+		position: relative;
+}
+
+#customers > p {
+		color: #656565;
+		font-size: 22px
+		line-height: 30px;
+		margin-bottom: 20px;
+}
+
+.meet {
+	left: -140px;
+	position: absolute;
+	top: 70px;
+}
+
+.meet a {
+		background: url("../img/img-customers.png");
+		display: block;
+		height: 104px;
+		text-indent: -1000px;
+		width: 143px;
+}
+
+.meet a:hover {
+		background-position: 0 100%;
+} 
+
+.meet p {
+		color: #336699;
+		cursor: pointer;
+		font-size: 14px;
+		text-align: center;
+}
+
+.meet p:hover {
+		color: #6699CC;
+		text-decoration: underline;
+}
+
+.arrow-left {
+		height: 36px;
+		position: relative;
+		top: -35px;
+		width: 69px;
+}
+
+.globe {
+		float: right;
+}
+
+/**manifesto**/
+#manifesto{
+	height: 445px;
+	margin-bottom: 50px;
+}
+
+#manifesto .column,
+#manifesto .column-end {
+		color: #222222;
+		float: left;
+		font-family: "Roboto", sans-serif;
+		font-size: 18px;
+		height: 385px;
+		line-height: 27px;
+		width: 45%;
+}
+
+#manifestop .column-end {
+		margin-left: 7%;		
+}
+#manifesto .chapter {
+		clear: left;
+		color: #CCCCCC;
+		float: left;
+		font-family: "Crimson Text", sans-serif;
+		font-size: 58px;
+		line-height: normal;
+		margin: -10px 15px 0 0;
+}
+
+#mainfesto .title {
+		color: #CC0000;
+		font-weight: bold;
+		margin: 5px 0;
+		text-align: left;
+} 
+
+#manifesto p {
+		font-size: 12px;
+		line-height: 16px;
+		text-align: left;
+}
+
+/**rework**/
+
+#rework {
+		height: 500px;
+		position: relative;
+}
+
+.book{ 
+		float: left; 
+}
+
+.quotes {
+		padding-top: 5px;
+		text-align: center;
+}
+
+.quotes div {
+		color: #888;
+		font-weight: normal;
+		font-family: "CrimsonRomanItalic", serif;
+		font-style: italic;
+		font-size: 22px;
+		margin-bottom: 10px;
+		margin-top: 35px;
+}
+
+.quotes p {
+		font-family: "Roboto", sans-serif;
+		font-size: 12px;
+}
+
+/**arrow right image**/
+.arrow-right {
+		right: 5px;
+		position: absolute;
+		top: 140px;
+		width: 69px;
+}
+
+/**crumpled paper image**/
+.crumple {
+		right: -125px;
+		position: absolute;
+		top: 50px;
+}
+
+.crumple p {
+		font-size: 12px;
+		text-align: center;
+}
+
+.crumple p:hover {
+		color: #6699CC;
+		text-decoration: underline;
+}
+
+/** offersings **/
+#offerings {
+		height: 415px;
+		text-align: center;
+}
+
+#offerings h2 {
+		border-bottom: 1px solid #E8E8E8;
+		color: #C00;
+		font-family: "Roboto", sans-serif;
+		font-size: 16px;
+		margin: 5px 0;
+}
+
+#offerings .column,
+#offerings .column-end {
+		color: #222222;
+		float: left;
+		font-size: 18px;
+		height: 385px;
+		line-height: 27px;
+		margin-left: 11%;
+		width: 37%;
+}
+
+#offerings .column-end {
+		margin-left: 7%; ;
+}
+
+#offerings li,
+#offerings li {
+		list-style-type: none;
+		padding: 5px;
+}
+
+#offerings a,
+#offerings a {
+		font-size: 22px;
+		font-weight: bold;
+		color: #222222;
+}
+
+#offerings small,
+#offerings small {
+		color: #656565;
+		font-size: 12px;
+		font-family: "Lucida Grande", sans-serif;
+}
+
+/**footer**/
+footer {
+		font-family: "Lucida Grande", sans-serif;
+		line-height: 1.5em;
+		margin: 30px auto;
+		text-align: center;
+}
+
+footer h3 {
+		font-size: 14px;
+		color: #CC0000;
+}
+
+footer a {
+		text-decoration: none;
+}
+
+footer li {
+		font-size: 12px;
+		padding: 5px 0;
+}
+
+footer a:hover {
+		color: #669C9C;
+}
+
+footer p {
+		font-size: 10px;
+		color: #999999;
+		margin-top: 50px;
+}
+
+/*media queries*/
+
+/* start max-width 1200px*/
+@media screen and (max-width: 1200px) {
+	.meet,
+	.arrow-left,
+	.customer > img,
+	.crumple,
+	.arrow-right,
+	#customers > img {
+		display: none;
+	}
+	header,
+	section {
+		width: 90%;
+    }
+    header h1 {
+    	font-size: 42px;
+    	line-height: 42px;
+    	margin: 0 5%;
+    }
+    #customers h1,
+    #manifesto h1,
+    #rework h1,
+    #offerings h1 {
+    	font-size: 32px;
+    	line-height: 32px;
+    }
+    #products div:first-child {
+    	margin-left: 10%;
+    }
+    #customers h1 {
+    	padding: 0 0 20px 0;
+    }
+    #manifesto,
+    #manifesto .column, #manifesto .column-end {
+    		height: 325px;
+    }
+    #manifesto .chapter {
+    		display: none;
+    }
+    #offerings .column small, #offerings .column-end small {
+    		font-size: 10px;
+    }
+
+ }/* end max-width 1200px*/
+
+/* start max-width 1050px*/
+@media screen and (max-width: 1050px) {
+	#products div:first-child {
+		margin-left: 7%;
+	}
+	#products p {
+		font-size: 12px;
+	}
+	#customers p{
+		line-height: 26px;
+	}
+	.quotes h3 {
+		font-size: 18px;
+	}
+	#manifesto {
+		height: 400px;
+	}
+	#manifesto p {
+		height: 50px;
+	}
+}/*end max-width 1050px*/
+
+/*start max-width 900px*/
+@media screen and (max-width: 900px) {
+	header {
+		margin-bottom: 0;
+	}
+	header h1 {
+		font-size:36px;
+		line-height: 36px;
+	}
+
+	#products div{
+		box-sizing: border-box;
+		display: inline-block;
+		float: none;
+		margin: 2% 1%;
+		padding: 15px 20px;
+		width: 27%;
+	}
+
+	#products div:first-child {
+		margin-left: 0;
+	}
+
+	.column, .column-end {
+		float: none;
+		width: 75%;
+		margin: 0 auto;
+	}
+
+	.column-end div:first-child {
+		clear: left;
+	}
+
+	#customers p{
+		font-size: 18px;
+	}
+
+	#manifesto,
+	#manifesto + hr,
+	#rework + hr {
+		display: none;
+	}
+
+	.rework, .offerings {
+		display: none;
+	}
+}/*end max-width 900px*/
+
+/*start max-width 750px*/
+@media screen and (max-width: 750px) {
+	#offerings {
+		display: none;
+	}
+	.quote div{
+		font-size: 16px;
+	}
+}/*end of max-width 750px*/
+
+/* start max-width 700px*/
+@media screen and (max-width: 675px) {
+	nav ul {
+		padding: 0;
+	}
+	#products {
+		height: auto;
+	}
+	#products div {
+		display: block;
+		margin: 10px auto !important;
+		width: 50%;
+	}
+}/* end max width 700px*/
+
+/* start max-width 600px*/
+@media screen and (max-width: 600px) {
+	#customers h1,
+	#manifesto h1,
+	#rework h1,
+	#offerings h1 {
+		font-size: 24px;
+	}
+	header h1 {
+		font-size: 28px;
+		line-height: 28px;
+	}
+	header h2{
+		font-size: 16px;
+		line-height: 25px;
+	}
+	#rework {
+		height: auto;
+	}
+	.book {
+		float: none;
+		text-align: center;
+	}
+	.quotes div {
+		margin-top: 0;
+	}
+	.quote p {
+		margin-bottom: 5px;
+	}
+}/*end max-width 600px*/

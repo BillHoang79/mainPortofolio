@@ -1,0 +1,39 @@
+body {
+	
+	background-image: url("../img/digital.jpg");
+	font-family: 'Montserrat', sans-serif !important;
+	text-align: center !important;
+}
+
+#border {
+	border: #fff;
+}
+
+.comtainer-fluid {
+	background-color: #000000;
+}
+
+#clock, #date, .one { 
+	border-radius: 15% 1%;
+	color: #fff;
+	font-size: 3em;
+	text-align: center;
+}
+
+#foot { 
+	color: #fff;
+	font-size: 3em;
+	height: 100px;
+	padding: 5px 5px;
+	text-align: center;
+	width: 100%;
+	-webkit-animation: footAnimation 5s;
+}
+
+@-webkit-keyframes footAnimation {
+	0% {-webkit-transform: scale(0,1);}
+	25% {-webkit-transform: scale(2,3);}
+	50% {-webkit-transform: scale(3,4);}
+/*	100% {-webkit-transform: scale(0,0);}
+	75% {-webkit-transform: scale(4,5);}
+*/}
