@@ -20,6 +20,10 @@ body {
 	text-align: center;
 }
 
+div h1 {
+    font-size: 2em;
+}
+
 #foot { 
 	color: #fff;
 	font-size: 3em;

@@ -4,34 +4,35 @@
 		<link charset="UTF-8">
 		<meta name="Bill Hoang" content="timeClock">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">  
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 		<link rel="shortcut icon"  	href="favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
     	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     	<link rel="stylesheet" type= "text/css" href="css/animate.css">
 		<title>Digital Time Clock</title>
 	</head>
-	<body>
+	<body ng-app="myApp">
 		<div class="container-fluid">
-			<div class="row"></div>
-				<div class="one col-xs-2">DIGITAL
+			<div class="row">
+				<div class="one col-xs-2">DIGITAL</div>
+				<div class="one col-xs-8"></div>
+			    <div class="one col-xs-2">CLOCK</div>
+            </div>
+            <div class="row">
+                <div class="one col-xs-12">
+                    <div class="date" ng-controller="myCtrl">
+                        <h1> {{ theTime }} <br> {{ date }} </h1>
+                    </div>
 				</div>
-				<div class="one col-xs-8">
-					<div id="clock">
-				</div>
-				</div>
-			<div class="one col-xs-2">CLOCK
-			</div>
-			<div class="row"></div>
-				<div class="one col-xs-2">DATE
-				</div>
-				<div class="one col-xs-8">
-					<div id="date">
-				</div>
-				</div>
-			<div class="one col-xs-2">YEAR
-			</div>
+            </div>
+            <div class="row">
+                <div class="one col-xs-2">DATE</div>
+                <div class="one col-xs-8"></div>
+			    <div class="one col-xs-2">YEAR</div>
+            </div>
 		</div>	
-		<script src="js/main.js"></script>
+		<script src="js/app.js"></script>
+		<script src="controllers/myctrl.js"></script>
 	</body>
 	<footer id="foot">Coding is love, Coding is life.</footer>
 </html>

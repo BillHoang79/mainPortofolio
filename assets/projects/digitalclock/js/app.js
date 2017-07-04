@@ -1,5 +1,6 @@
+var  app = angular.module('myApp', []);
 
-
+/*
 //adds 0 infront of the time if hours are between 1-9
 function addZero(t) {
 	if (t < 10) {
@@ -56,3 +57,4 @@ function runClock () {
 document.getElementById('date').addEventListener('onload', runClock(), false)
 document.getElementById('clock').addEventListener('onload', runClock(), false)
 
+*/
