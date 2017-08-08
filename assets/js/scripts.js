@@ -1,4 +1,4 @@
-(($, window, document, undefined) => {
+(function ($, window, document, undefined) {
     'use strict';
 
     var headerHeight = $("header").height();
@@ -11,7 +11,7 @@
     });
 
     //start header either fixed or not fixed
-    () => {
+    function initHeader(){
 		$("header").css("height", headerHeight);
     }
 
@@ -23,7 +23,7 @@
 	    }
 	});
 
-    let handleScrollHeader = () => {
+    function handleScrollHeader(){
     	var scrollTop = $(window).scrollTop();
     	if (scrollTop > headerHeight){
     		$("header").addClass("fixed");
@@ -33,7 +33,7 @@
     }
 
     //when loading a page check whether i should show the scroll to top button or not
-    let initScrollToTop = () => {
+    function initScrollToTop(){
     	var scrollTop = $(window).scrollTop();
 
     	if (scrollTop > 500){
@@ -44,14 +44,14 @@
     }
 
     //init the height of fullscreen image
-    let initFullscreenImage = () => {
+    function initFullscreenImage(){
     	var winHeight = $(window).height();
 
     	$(".home_fullscreen_image").css("height", winHeight);
     }
 
     //when you click the scroll to top button, go to the top of the page
-    $(".scroll_to_top").on("click", e => {
+    $(".scroll_to_top").on("click", function(e){
 		e.preventDefault();
 		$("html, body").animate({scrollTop:0}, 800);
     });
@@ -64,20 +64,20 @@
     $('.about_eh').equalHeights();
     $('.about_bot_eh').equalHeights();
 
-    $(window).resize(() => {
+    $(window).resize(function(){
 
     	initFullscreenImage();
     	
     })
 
     //use the init functions when scrolling as well
-    $(window).scroll(() => {
+    $(window).scroll(function(){
     	initScrollToTop();
     	handleScrollHeader();
     });
 
     //mobile navigation toggle button for mobile menu
-    $(".mobile_nav_toggle").on("click", () => {
+    $(".mobile_nav_toggle").on("click", function(){
 
     	if ($("#header").hasClass("mobile")){
     		$("#header").removeClass("mobile");
@@ -90,7 +90,7 @@
     });
 
     //when you click a mobile navigation anchor tag, the nav should close
-    $(".navigation > li > a").on("click", () => {
+    $(".navigation > li > a").on("click", function(){
 
     	if ($("#header").hasClass("mobile")){
 
@@ -154,7 +154,7 @@
   	//portfolio
   	var portfolioCols = $(".portfolio_grid").attr("data-cols");
     var $workItems = $('.portfolio_grid'),
-    colWidth = () => {
+    colWidth = function () {
       var w = $workItems.width(), 
       columnNum = 1,
       columnWidth = 0;
@@ -187,7 +187,7 @@
       });
       return columnWidth;
     },
-    isotope = () => {
+    isotope = function () {
       $workItems.isotope({
         resizable: true,
         itemSelector: '.grid_item',
@@ -198,12 +198,12 @@
       });
     };
     isotope();
-    $(window).on("debouncedresize", event => {
+    $(window).on("debouncedresize", function(event){
     	isotope();
     });
 
     //portfolio filter
-    $('.portfolio_grid_filter li').on('click', () => {
+    $('.portfolio_grid_filter li').on('click', function(){
 	    $('.portfolio_grid_filter li').removeClass('active');
 	    $(this).addClass('active');
 
@@ -215,7 +215,7 @@
     });
 
     //pre-loader
-	window.addEventListener('DOMContentLoaded', () => {
+	window.addEventListener('DOMContentLoaded', function() {
 	    new QueryLoader2(document.querySelector("body"), {
 	        barColor: "#999999",
 	        backgroundColor: "#ffffff",
@@ -230,7 +230,7 @@
 	});
 
 	//contact form
-	$("body").on("click", ".contact_button", () => {
+	$("body").on("click", ".contact_button", function(){
 		var name = $(this).parents(".contact_form").find(".contact_name");
 		var email = $(this).parents(".contact_form").find(".contact_email");
 		var message = $(this).parents(".contact_form").find(".contact_message");
@@ -248,7 +248,7 @@
 				'message' : message.val()
 			},
 			dataType: 'json',
-			success: $.proxy( data => {
+			success: $.proxy(function(data) {
 
 				if (data.error == false){
 					name.val('');
@@ -273,7 +273,7 @@
 
 	});
 	
-	$(".goto_section").on("click", () => {
+	$(".goto_section").on("click", function(){
 
 		var section = $(this).attr("data-section-id");
 
@@ -283,7 +283,7 @@
 
 	});
 
-	let toggleBounce = () => {
+	function toggleBounce() {
 		if (marker.getAnimation() !== null) {
 			marker.setAnimation(null);
 		} else {
@@ -297,7 +297,7 @@
 
 		var marker;
 	    $("#gmap").appear();
-	    $("body").on("appear", "#gmap", (event, $all_appeared_elements) => {
+	    $("body").on("appear", "#gmap", function(event, $all_appeared_elements){
 
 	    	if (!$(this).hasClass("done")){
 
@@ -338,22 +338,22 @@
 
 	//check for mobile
 	var isMobile = {
-		Android: () =>  {
+		Android: function() {
 			return navigator.userAgent.match(/Android/i);
 		},
-		BlackBerry: () => {
+		BlackBerry: function() {
 			return navigator.userAgent.match(/BlackBerry/i);
 		},
-		iOS: () =>  {
+		iOS: function() {
 			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
 		},
-		Opera: () => {
+		Opera: function() {
 			return navigator.userAgent.match(/Opera Mini/i);
 		},
-		Windows: () =>  {
+		Windows: function() {
 			return navigator.userAgent.match(/IEMobile/i);
 		},
-		any: () => {
+		any: function() {
 			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 		}
 	};
@@ -379,7 +379,7 @@
 			$(".home_fullscreen_image").parallax("50%", 0.4);
 		});
 
-		$(window).load(() => {
+		$(window).load(function(){
 
 			//init WOW animations
 			new WOW().init();
@@ -388,7 +388,7 @@
 
 		//animate skills
 	    $(".skills .skill").appear();
-	    $("body").on("appear", ".skills .skill", (event, $all_appeared_elements) => {
+	    $("body").on("appear", ".skills .skill", function(event, $all_appeared_elements){
 
 	    	if (!$(this).hasClass("animated")){
 		    	var percentage = $(this).find(".bar").attr("data-width");
@@ -403,7 +403,7 @@
 
 	    //do counter up
 	    $(".counter_up").appear();
-	    $("body").on("appear", ".counter_up", (event, $all_appeared_elements) => {
+	    $("body").on("appear", ".counter_up", function(event, $all_appeared_elements){
 
 	    	if (!$(this).hasClass("animated")){
 				$(this).counterUp({
@@ -429,7 +429,7 @@
 
 		//animate skills
 	    $(".skills .skill").appear();
-	    $("body").on("appear", ".skills .skill", (event, $all_appeared_elements) => {
+	    $("body").on("appear", ".skills .skill", function(event, $all_appeared_elements){
 
 	    	if (!$(this).hasClass("animated")){
 		    	var percentage = $(this).find(".bar").attr("data-width");
